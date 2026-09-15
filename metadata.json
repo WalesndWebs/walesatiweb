@@ -1,0 +1,8 @@
+{
+  "name": "Wales & Webs",
+  "description": "We design websites, automate your workflows, manage your social media and help you grow with smart digital solutions built around how your business actually works.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

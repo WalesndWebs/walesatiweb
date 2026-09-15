@@ -1,0 +1,568 @@
+<?php
+/**
+ * Wales & Webs — Digital Systems for Modern Businesses
+ * Production index.php file for Hostinger deployment
+ */
+require_once __DIR__ . '/partials/header.php';
+?>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="section-eyebrow">YOUR DIGITAL PARTNER</div>
+          <h1 class="hero-title">
+            Build your business<br>
+            for the <span class="highlight-green">digital</span> <span class="highlight-purple">world.</span>
+          </h1>
+          <p class="hero-desc">
+            We design websites, automate your workflows, manage your social media and help you grow &mdash; with smart digital solutions built around how your business actually works.
+          </p>
+
+          <div class="hero-buttons">
+            <button type="button" class="btn btn-purple open-contact-modal" id="heroStartJourneyBtn">
+              Start Your Digital Journey &rarr;
+            </button>
+            <a href="#services" class="btn btn-dark" id="heroExploreServicesBtn">
+              Explore Our Services
+            </a>
+          </div>
+
+          <!-- Feature Chips Bar -->
+          <div class="hero-pills-bar">
+            <div class="hero-pill-item">
+              <span class="hero-pill-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+              <span>Websites &amp; E-commerce</span>
+            </div>
+
+            <div class="hero-pill-item">
+              <span class="hero-pill-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </span>
+              <span>Automation &amp; AI</span>
+            </div>
+
+            <div class="hero-pill-item">
+              <span class="hero-pill-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span>Social Media &amp; SMS</span>
+            </div>
+
+            <div class="hero-pill-item">
+              <span class="hero-pill-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <span>Client Portal &amp; Support</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual: Ambient Modern Workspace with Devices -->
+        <div class="hero-visual-wrapper">
+          <!-- Handwritten Script -->
+          <div class="hero-handwritten-note handwritten">
+            Ideas.<br>Systems.<br>Growth.
+          </div>
+
+          <!-- Ambient Workspace Platform -->
+          <div class="hero-stage">
+            
+            <!-- Laptop Device Mockup -->
+            <div class="laptop-mockup">
+              <div class="laptop-screen">
+                <div class="laptop-display-inner">
+                  <div class="laptop-logo-badge">
+                    <span style="color: var(--accent-cyan);">&#9670;</span> Wales &amp; Webs
+                  </div>
+                  <div class="laptop-screen-title">
+                    Modern Websites for<br><span>Modern Brands.</span>
+                  </div>
+                  <a href="#services" class="laptop-screen-btn">Explore Systems &rarr;</a>
+                </div>
+              </div>
+              <div class="laptop-base">
+                <div class="laptop-notch"></div>
+              </div>
+            </div>
+
+            <!-- Mobile Phone Mockup -->
+            <div class="phone-mockup">
+              <div class="phone-header-dot"></div>
+              <div class="phone-screen">
+                <div style="font-size: 8px; color: var(--accent-green); font-weight: 700; letter-spacing: 0.5px;">W &bull; MOBILE</div>
+                <div class="phone-screen-text">
+                  Your Business.<br>
+                  <span>Our Systems.</span><br>
+                  Real Growth.
+                </div>
+                <button type="button" class="phone-screen-btn open-contact-modal">Get Started</button>
+              </div>
+            </div>
+
+            <!-- Ceramic Mug with W Emblem -->
+            <div class="desk-mug" title="Wales & Webs Ceramic Mug">
+              <span style="font-weight: 800; font-size: 11px; color: #a78bfa;">W</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: WHAT WE HELP YOU BUILD
+       ======================================================================== -->
+  <section class="section-what-we-build" id="services">
+    <div class="container">
+      
+      <!-- Two Column Header -->
+      <div class="two-col-header">
+        <div>
+          <div class="section-eyebrow">WHAT WE HELP YOU BUILD</div>
+          <h2 class="section-title">Complete digital solutions for modern businesses.</h2>
+        </div>
+        <div>
+          <p class="section-subtitle">
+            From a simple website to a full digital ecosystem, we give you the tools, systems and support to work smarter, reach more customers and grow faster.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Solution Cards Grid -->
+      <div class="solution-cards-grid">
+        
+        <!-- Card 01: Digital Presence -->
+        <div class="solution-card glow-purple" id="serviceCard01">
+          <div>
+            <div class="solution-card-top">
+              <span class="step-badge">01</span>
+              <div class="solution-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+            </div>
+            <h3 class="solution-title">Digital Presence</h3>
+            <p class="solution-desc">
+              Modern, fast and responsive websites, e-commerce stores and landing pages that convert visitors into paying clients.
+            </p>
+          </div>
+          <a href="#contact" class="solution-link open-contact-modal">Learn more &rarr;</a>
+        </div>
+
+        <!-- Card 02: Business Systems -->
+        <div class="solution-card glow-green" id="serviceCard02">
+          <div>
+            <div class="solution-card-top">
+              <span class="step-badge">02</span>
+              <div class="solution-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+            </div>
+            <h3 class="solution-title">Business Systems</h3>
+            <p class="solution-desc">
+              Connect your tools, manage your data and simplify your workflows with custom automation, CRM, and API integrations.
+            </p>
+          </div>
+          <a href="#contact" class="solution-link open-contact-modal">Learn more &rarr;</a>
+        </div>
+
+        <!-- Card 03: Automation & AI -->
+        <div class="solution-card glow-purple" id="serviceCard03">
+          <div>
+            <div class="solution-card-top">
+              <span class="step-badge">03</span>
+              <div class="solution-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+            </div>
+            <h3 class="solution-title">Automation &amp; AI</h3>
+            <p class="solution-desc">
+              Remove repetitive manual tasks, save operational hours and let smart digital systems handle the busy work effortlessly.
+            </p>
+          </div>
+          <a href="#contact" class="solution-link open-contact-modal">Learn more &rarr;</a>
+        </div>
+
+        <!-- Card 04: Digital Growth -->
+        <div class="solution-card glow-green" id="serviceCard04">
+          <div>
+            <div class="solution-card-top">
+              <span class="step-badge">04</span>
+              <div class="solution-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+            </div>
+            <h3 class="solution-title">Digital Growth</h3>
+            <p class="solution-desc">
+              Social media management, bulk SMS campaigns, SEO and conversion-focused strategies that bring real customers to your business.
+            </p>
+          </div>
+          <a href="#contact" class="solution-link open-contact-modal">Learn more &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3: OUR PROCESS
+       ======================================================================== -->
+  <section class="section-process" id="process">
+    <div class="container">
+      
+      <div class="process-header">
+        <div>
+          <div class="section-eyebrow">OUR PROCESS</div>
+          <h2 class="section-title">Simple steps. Real results.</h2>
+        </div>
+        <div class="process-handwritten-note handwritten">
+          Your vision. Our process. Better results.
+        </div>
+      </div>
+
+      <!-- Process Chain Row -->
+      <div class="process-steps-row">
+        
+        <!-- Step 01: Understand -->
+        <div class="process-step-item">
+          <div class="process-step-head">
+            <div class="process-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <div class="process-step-num">01</div>
+              <h4 class="process-step-title">Understand</h4>
+            </div>
+          </div>
+          <p class="process-step-desc">We learn about your business, goals and challenges.</p>
+        </div>
+
+        <div class="process-arrow">&rarr;</div>
+
+        <!-- Step 02: Plan -->
+        <div class="process-step-item">
+          <div class="process-step-head">
+            <div class="process-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+            </div>
+            <div>
+              <div class="process-step-num">02</div>
+              <h4 class="process-step-title">Plan</h4>
+            </div>
+          </div>
+          <p class="process-step-desc">We define the right solution for your specific needs.</p>
+        </div>
+
+        <div class="process-arrow">&rarr;</div>
+
+        <!-- Step 03: Build -->
+        <div class="process-step-item">
+          <div class="process-step-head">
+            <div class="process-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div>
+              <div class="process-step-num">03</div>
+              <h4 class="process-step-title">Build</h4>
+            </div>
+          </div>
+          <p class="process-step-desc">We design, develop and test with a focus on quality.</p>
+        </div>
+
+        <div class="process-arrow">&rarr;</div>
+
+        <!-- Step 04: Grow -->
+        <div class="process-step-item">
+          <div class="process-step-head">
+            <div class="process-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            </div>
+            <div>
+              <div class="process-step-num">04</div>
+              <h4 class="process-step-title">Grow</h4>
+            </div>
+          </div>
+          <p class="process-step-desc">We support, improve and help you get more ongoing value.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 4: MEET USABIME
+       ======================================================================== -->
+  <section class="section-usabime" id="usabime">
+    <div class="container">
+      <div class="usabime-banner-card">
+        
+        <!-- Left Usabime Content -->
+        <div class="usabime-content">
+          <div class="section-eyebrow">MEET USABIME</div>
+          <h2 class="usabime-title">One platform. Total control.</h2>
+          <p class="usabime-desc">
+            Usabime is our onboarding and education platform for new and existing customers. It helps you get guided, choose the right services and manage your projects &mdash; all in one place.
+          </p>
+
+          <!-- Usabime Checklist -->
+          <ul class="usabime-checklist">
+            <li class="usabime-check-item">
+              <span class="usabime-check-icon">&#10003;</span>
+              <span>Tell us about your business</span>
+            </li>
+            <li class="usabime-check-item">
+              <span class="usabime-check-icon">&#10003;</span>
+              <span>Get guided and learn</span>
+            </li>
+            <li class="usabime-check-item">
+              <span class="usabime-check-icon">&#10003;</span>
+              <span>Choose what you need</span>
+            </li>
+            <li class="usabime-check-item">
+              <span class="usabime-check-icon">&#10003;</span>
+              <span>Start your project</span>
+            </li>
+            <li class="usabime-check-item">
+              <span class="usabime-check-icon">&#10003;</span>
+              <span>Manage your relationship</span>
+            </li>
+          </ul>
+
+          <div>
+            <button type="button" class="btn btn-green open-usabime-modal" id="usabimeStartBtn">
+              Start with Usabime &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Usabime UI Preview -->
+        <div class="usabime-preview-panel">
+          <div class="usabime-sidebar">
+            <div class="usabime-sidebar-brand">
+              <span style="color: var(--accent-purple);">&#9670;</span> Usabime
+            </div>
+            <div class="usabime-nav-item active">Dashboard</div>
+            <div class="usabime-nav-item">Services</div>
+            <div class="usabime-nav-item">Projects</div>
+            <div class="usabime-nav-item">Resources</div>
+            <div class="usabime-nav-item">Support</div>
+          </div>
+
+          <div class="usabime-main-view">
+            <div class="usabime-view-header">
+              Welcome back,<br>Let's build something great.
+            </div>
+            <div class="usabime-glow-card">
+              <div class="usabime-card-logo">
+                <span style="color: #ffffff; font-weight: 800;">W</span>
+              </div>
+              <div class="usabime-card-text">
+                Your business.<br>Our support.<br>Your growth.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 5: OUR WORK (PROJECTS)
+       ======================================================================== -->
+  <section class="section-our-work" id="projects">
+    <div class="container">
+      
+      <div class="work-header">
+        <div>
+          <div class="section-eyebrow">OUR WORK</div>
+          <h2 class="section-title">Built for businesses like yours.</h2>
+        </div>
+        <a href="#contact" class="view-all-link open-contact-modal">
+          View all projects &rarr;
+        </a>
+      </div>
+
+      <!-- 4 Project Showcase Cards -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: Caroline's Place -->
+        <div class="project-card" data-case-slug="carolines-place">
+          <div class="project-thumb-box">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Caroline's Place" class="project-thumb-img" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Caroline's Place</h3>
+            <div class="project-tags">Website &bull; Booking System &bull; POS</div>
+            <p class="project-summary">A modern website and booking system for a premium beauty and wellness brand.</p>
+            <span class="project-case-link">View case study &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Prodigy Group -->
+        <div class="project-card" data-case-slug="prodigy-group">
+          <div class="project-thumb-box">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Prodigy Group" class="project-thumb-img" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Prodigy Group</h3>
+            <div class="project-tags">Website &bull; Client Portal &bull; Automation</div>
+            <p class="project-summary">Built a professional online presence and client portal for a growing group.</p>
+            <span class="project-case-link">View case study &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Taste by Edima -->
+        <div class="project-card" data-case-slug="taste-by-edima">
+          <div class="project-thumb-box">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Taste by Edima" class="project-thumb-img" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Taste by Edima</h3>
+            <div class="project-tags">Website &bull; E-commerce &bull; Social Media</div>
+            <p class="project-summary">Helped a food brand grow its online presence and increase sales.</p>
+            <span class="project-case-link">View case study &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Printmadeasy -->
+        <div class="project-card" data-case-slug="printmadeasy">
+          <div class="project-thumb-box">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Printmadeasy" class="project-thumb-img" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Printmadeasy</h3>
+            <div class="project-tags">Website &bull; E-commerce &bull; SEO</div>
+            <p class="project-summary">Designed a simple, fast and effective online store for custom printing.</p>
+            <span class="project-case-link">View case study &rarr;</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 6: WHAT OUR CLIENTS SAY (TESTIMONIALS)
+       ======================================================================== -->
+  <section class="section-testimonials" id="story">
+    <div class="container">
+      
+      <div class="testimonials-header">
+        <div>
+          <div class="section-eyebrow">WHAT OUR CLIENTS SAY</div>
+          <h2 class="section-title">Trusted by businesses across different industries.</h2>
+        </div>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-btn" id="testimonialPrev" aria-label="Previous Testimonial">
+            &larr;
+          </button>
+          <button type="button" class="carousel-btn" id="testimonialNext" aria-label="Next Testimonial">
+            &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="testimonials-grid">
+        
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            &ldquo;Wales &amp; Webs gave us a modern website and booking system that has really improved our customer experience. Highly recommended!&rdquo;
+          </p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Caroline M." class="client-avatar">
+            <div class="client-info">
+              <span class="client-name">Caroline M.</span>
+              <span class="client-role">CEO, Caroline's Place</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            &ldquo;Their team is professional, responsive and always delivers. Our client portal has made our operations so much easier.&rdquo;
+          </p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" alt="Tunde A." class="client-avatar">
+            <div class="client-info">
+              <span class="client-name">Tunde A.</span>
+              <span class="client-role">MD, Prodigy Group</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            &ldquo;From design to support, Wales &amp; Webs understood our vision and brought it to life. We're very happy with the results.&rdquo;
+          </p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=120&h=120&q=80" alt="Edima T." class="client-avatar">
+            <div class="client-info">
+              <span class="client-name">Edima T.</span>
+              <span class="client-role">Founder, Taste by Edima</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 7: LET'S BUILD TOGETHER (CTA BANNER)
+       ======================================================================== -->
+  <section class="section-cta-banner" id="contact">
+    <div class="container">
+      <div class="cta-banner-wrapper">
+        
+        <div class="cta-grid">
+          
+          <!-- Left CTA Text -->
+          <div class="cta-left">
+            <div class="cta-eyebrow">LET'S BUILD TOGETHER</div>
+            <h2 class="cta-headline">Ready to take your business to the next level?</h2>
+          </div>
+
+          <!-- Center Text & Button -->
+          <div class="cta-center">
+            <p class="cta-subtext">
+              Tell us what you want to build and let's create something amazing together.
+            </p>
+            <div>
+              <button type="button" class="btn btn-green open-contact-modal" id="ctaBannerBtn">
+                Start your digital journey &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Handwritten Green Script -->
+          <div class="cta-right-script">
+            <div class="cta-script-text handwritten">
+              Your Vision.<br>
+              Our Code.<br>
+              Real Growth.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<?php
+require_once __DIR__ . '/partials/footer.php';
+?>
