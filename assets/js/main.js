@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll('.modal-overlay').forEach(modal => {
+  document.querySelectorAll('.modal-overlay, .modal-backdrop').forEach(modal => {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         closeModal(modal);
@@ -142,14 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.modal-close-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const modal = btn.closest('.modal-overlay');
+      const modal = btn.closest('.modal-overlay, .modal-backdrop');
       if (modal) closeModal(modal);
     });
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      document.querySelectorAll('.modal-overlay.active').forEach(closeModal);
+      document.querySelectorAll('.modal-overlay.active, .modal-backdrop.active').forEach(closeModal);
     }
   });
 
@@ -233,5 +233,152 @@ document.addEventListener('DOMContentLoaded', () => {
     prevBtn.addEventListener('click', () => {
       testContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
+  }
+
+  // --------------------------------------------------------------------------
+  // Hero Visual Slider (3-Slide Showcase)
+  // --------------------------------------------------------------------------
+  const sliderContainer = document.getElementById('heroHeaderSlider');
+  if (sliderContainer) {
+    const slides = sliderContainer.querySelectorAll('.hero-slide-item');
+    const tabs = sliderContainer.querySelectorAll('.slider-tab');
+    const dots = sliderContainer.querySelectorAll('.slider-dot');
+    const prevBtn = document.getElementById('heroSliderPrev');
+    const nextBtn = document.getElementById('heroSliderNext');
+    const counterNum = document.getElementById('currentSlideNum');
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    const autoPlayDelay = 5000;
+    let autoPlayTimer = null;
+    let progressTimer = null;
+    let startTime = Date.now();
+
+    function goToSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentIndex = index;
+
+      // Update slides
+      slides.forEach((slide, i) => {
+        if (i === currentIndex) {
+          slide.classList.add('active');
+          slide.setAttribute('aria-hidden', 'false');
+        } else {
+          slide.classList.remove('active');
+          slide.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Update tabs
+      tabs.forEach((tab, i) => {
+        const progressLine = tab.querySelector('.tab-progress-line');
+        if (i === currentIndex) {
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          if (progressLine) progressLine.style.width = '0%';
+        } else {
+          tab.classList.remove('active');
+          tab.setAttribute('aria-selected', 'false');
+          if (progressLine) progressLine.style.width = '0%';
+        }
+      });
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+
+      // Update counter
+      if (counterNum) {
+        counterNum.textContent = String(currentIndex + 1).padStart(2, '0');
+      }
+
+      resetAutoPlay();
+    }
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      startTime = Date.now();
+
+      progressTimer = setInterval(() => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min((elapsed / autoPlayDelay) * 100, 100);
+        const activeTab = tabs[currentIndex];
+        if (activeTab) {
+          const line = activeTab.querySelector('.tab-progress-line');
+          if (line) line.style.width = `${progress}%`;
+        }
+      }, 40);
+
+      autoPlayTimer = setTimeout(() => {
+        nextSlide();
+      }, autoPlayDelay);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearTimeout(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+      if (progressTimer) {
+        clearInterval(progressTimer);
+        progressTimer = null;
+      }
+    }
+
+    function resetAutoPlay() {
+      stopAutoPlay();
+      startAutoPlay();
+    }
+
+    // Controls
+    if (prevBtn) prevBtn.addEventListener('click', () => prevSlide());
+    if (nextBtn) nextBtn.addEventListener('click', () => nextSlide());
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => goToSlide(i));
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => goToSlide(i));
+    });
+
+    // Pause on hover
+    sliderContainer.addEventListener('mouseenter', () => stopAutoPlay());
+    sliderContainer.addEventListener('mouseleave', () => startAutoPlay());
+
+    // Touch Swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    sliderContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoPlay();
+    }, { passive: true });
+
+    sliderContainer.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const swipeDistance = touchStartX - touchEndX;
+      if (Math.abs(swipeDistance) > 40) {
+        if (swipeDistance > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      } else {
+        startAutoPlay();
+      }
+    }, { passive: true });
+
+    // Start playback
+    goToSlide(0);
   }
 });
